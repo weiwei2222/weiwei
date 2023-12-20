@@ -139,11 +139,22 @@ body {
   padding-top: 2rem;
 }
 #aboutme {
+  display: flex;
   background-color: #c9c9c9;
   padding: 10rem 0;
   font-size: 1.6rem;
-}
-.row {
   max-width: 114rem;
   margin: 0 auto;
+}
+@media screen and (max-width: 980px) #aboutme {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+.row {
+}
+.photo {
+}
+.photo img {
+  border-radius: 100%;
+  display: block;
 }

@@ -72,7 +72,6 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   text-align: center;
   color: #ffffff;
 }
@@ -95,7 +94,6 @@ body {
   transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
     border-top-right-radius 0.2s ease, padding 0.2s ease;
   color: #636363;
-  position: absolute;
   width: 100%;
   padding: 1rem;
   background-color: #f7f7f7;
@@ -123,4 +121,29 @@ body {
 .nav ul li a.active {
   background-color: #ffffff;
   box-shadow: none;
+}
+.footer {
+  font-size: 1.4rem;
+  height: 20vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(57, 148, 217, 0.8),
+      rgba(114, 43, 134, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 2rem;
+}
+#aboutme {
+  background-color: #c9c9c9;
+  padding: 10rem 0;
+  font-size: 1.6rem;
+}
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
 }

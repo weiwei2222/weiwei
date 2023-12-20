@@ -140,21 +140,60 @@ body {
 }
 #aboutme {
   display: flex;
-  background-color: #c9c9c9;
-  padding: 10rem 0;
-  font-size: 1.6rem;
+  /* background-color: #c9c9c9; */
+  padding: 5rem 0;
+  font-size: 1.8rem;
   max-width: 114rem;
   margin: 0 auto;
 }
-@media screen and (max-width: 980px) #aboutme {
-  flex-direction: column-reverse;
-  text-align: center;
+
+@media screen and (max-width: 980px) {
+  #aboutme {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 .row {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  padding: 5rem;
+}
+.section-title {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(57, 148, 217),
+    rgba(114, 43, 134)
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 3.5rem;
 }
 .photo {
+  margin: 0 auto;
 }
 .photo img {
   border-radius: 100%;
   display: block;
+}
+#contact {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+.icons {
+  margin: 0 auto;
+  width: 60%;
+}
+.icons ul li {
+  margin: 0 4rem;
+  list-style: none;
+}
+.icons ul li a:link {
+  text-decoration: none;
+  color: rgb(5, 0, 80);
+}
+.icons ul li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(57, 80, 229);
 }

@@ -64,11 +64,11 @@ body {
 .header {
   height: 30vh;
   background-image: linear-gradient(
-      to right bottom,
-      rgba(57, 148, 217, 0.8),
-      rgba(114, 43, 134, 0.8)
+    135deg,
+      rgba(10, 223, 219, 0.9),
+      rgba(114, 43, 134, 0.9)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero.png);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -126,11 +126,11 @@ body {
   font-size: 1.4rem;
   height: 20vh;
   background-image: linear-gradient(
-      to right bottom,
-      rgba(57, 148, 217, 0.8),
-      rgba(114, 43, 134, 0.8)
+    135deg,
+      rgba(10, 223, 219, 0.9),
+      rgba(114, 43, 134, 0.9)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero.png);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -225,14 +225,20 @@ body {
 .card__picture {
   background-size: cover;
   height: 23rem;
-  background-blend-mode: screen;
+  background-blend-mode: normal;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.card__picture--1 {
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
-    url(../img/nat-5.jpg);
+.card__picture--1{
+  background-image: linear-gradient(180deg,rgba(10, 223, 219, 0.9),
+  rgba(114, 43, 134, 0.9)),
+    url(../img/IMG_1005.jpeg);
+}
+.card__picture--2 {
+  background-image: linear-gradient(180deg,rgba(10, 223, 219, 0.9),
+  rgba(114, 43, 134, 0.9)),
+    url(../img/arts.png);
 }
 .card__heading {
   font-size: 2.8rem;

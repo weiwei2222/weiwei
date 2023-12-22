@@ -140,7 +140,6 @@ body {
 }
 #aboutme {
   display: flex;
-  /* background-color: #c9c9c9; */
   padding: 5rem 0;
   max-width: 114rem;
   margin: 0 auto;
@@ -227,20 +226,11 @@ body {
   background-size: cover;
   height: 23rem;
   background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
 .card__picture--1 {
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      right bottom,
-      from(#ffb900),
-      to(#ff7730)
-    ),
-    url(../img/nat-5.jpg);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
     url(../img/nat-5.jpg);
 }

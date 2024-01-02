@@ -210,7 +210,6 @@ body {
 .card {
   width: calc((100% - 2 * 6rem) / 3);
   /* width: 28%; */
-  float: left;
   height: 52rem;
   transition: all 0.8s ease;
   border-radius: 3px;
@@ -296,7 +295,7 @@ body {
 }
 .icons {
   margin: 2rem auto;
-  width: 33%;
+  width: 35rem;
   display: flex;
 }
 .icons ul li {

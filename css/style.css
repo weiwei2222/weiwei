@@ -268,7 +268,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 .card__details {
-  padding: 3rem;
+  padding: 2.8rem;
 }
 .card__details ul {
   list-style: none;
@@ -277,7 +277,7 @@ body {
 }
 .card__details ul li {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   padding: 1rem;
 }
 .card__details ul li:not(:last-child) {
@@ -290,23 +290,30 @@ body {
 }
 
 #contact {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: center;
   margin-bottom: 4rem;
 }
 .icons {
-  margin: 0 auto;
-  width: 60%;
+  margin: 2rem auto;
+  width: 33%;
+  display: flex;
 }
 .icons ul li {
   margin: 0 4rem;
   list-style: none;
+  float: left;
 }
-.icons ul li a:link {
+.icons ul li a {
   text-decoration: none;
   color: rgb(5, 0, 80);
+  justify-content: space-between;
 }
-.icons ul li a:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(57, 80, 229);
+.icons ul li i {
+  font-size: 3.2rem;
+}
+.icons ul li svg {
+  width: 3rem;
+  height: 3rem;
+  color: #0076b2;
 }

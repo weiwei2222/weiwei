@@ -56,13 +56,13 @@ body {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  /*font-size: 16px;*/
   line-height: 1.7;
-  color: #777;
+  color: #555;
 }
 
 .header {
-  height: 30vh;
+  height: 34vh;
+  min-height: 22rem;
   background-image: linear-gradient(
       135deg,
       rgba(10, 223, 219, 0.9),
@@ -74,7 +74,6 @@ body {
   position: relative;
   text-align: center;
   color: #ffffff;
-  position: relative;
 }
 .header-center {
   width: 100%;
@@ -82,6 +81,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  padding: 0 2rem;
 }
 .name {
   font-size: 4rem;
@@ -96,6 +96,12 @@ body {
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+}
+.subtitle {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
 }
 .nav {
   transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
@@ -132,6 +138,7 @@ body {
 .footer {
   font-size: 1.6rem;
   height: 20vh;
+  min-height: 12rem;
   background-image: linear-gradient(
       135deg,
       rgba(10, 223, 219, 0.9),
@@ -146,6 +153,7 @@ body {
 }
 #aboutme {
   display: flex;
+  align-items: center;
   padding: 5rem 0;
   max-width: 114rem;
   margin: 0 auto;
@@ -166,6 +174,9 @@ body {
   margin: 0 auto;
   font-size: 1.8rem;
 }
+.row p + p {
+  margin-top: 1.5rem;
+}
 .section-title {
   background-image: linear-gradient(
     to right bottom,
@@ -173,26 +184,68 @@ body {
     rgba(114, 43, 134)
   );
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+#projects .section-title,
+#skills .section-title,
+#experience .section-title,
+#contact .section-title {
+  text-align: center;
 }
 .photo {
   margin: 0 auto;
+  padding: 2rem;
 }
 .photo img {
   border-radius: 100%;
   display: block;
+  max-width: 24rem;
 }
+
+/* ---------- Skills ---------- */
+#skills {
+  padding: 4rem 2rem 5rem;
+  background-color: #f7f7f7;
+}
+.skills-wrap {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skill-group {
+  flex: 1 1 40%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+  padding: 2.4rem 2.8rem;
+}
+.skill-group h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+.skill-group p {
+  font-size: 1.7rem;
+}
+
+/* ---------- Projects ---------- */
 #projects {
   text-align: center;
   margin: 4rem 0;
+  padding-top: 2rem;
 }
 
 .projects-row {
   animation-name: moveInBottom;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  padding: 5rem;
+  padding: 2rem 5rem 5rem;
   max-width: 114rem;
   margin: 0 auto;
   font-size: 1.8rem;
@@ -202,14 +255,13 @@ body {
   .projects-row {
     max-width: 50rem;
     padding: 0 3rem;
-    display: list-item;
+    display: block;
   }
 }
 
 .card {
   width: calc((100% - 2 * 6rem) / 3);
-  /* width: 28%; */
-  height: 52rem;
+  min-height: 46rem;
   transition: all 0.8s ease;
   border-radius: 3px;
   overflow: hidden;
@@ -238,24 +290,24 @@ body {
 .card__picture--1 {
   background-image: linear-gradient(
       180deg,
-      rgba(10, 223, 219, 0.9),
-      rgba(114, 43, 134, 0.9)
+      rgba(10, 223, 219, 0.55),
+      rgba(114, 43, 134, 0.55)
     ),
     url(../img/IMG_1005.jpeg);
 }
 .card__picture--2 {
   background-image: linear-gradient(
       180deg,
-      rgba(10, 223, 219, 0.9),
-      rgba(114, 43, 134, 0.9)
+      rgba(10, 223, 219, 0.55),
+      rgba(114, 43, 134, 0.55)
     ),
     url(../img/arts.png);
 }
 .card__picture--3 {
   background-image: linear-gradient(
       180deg,
-      rgba(10, 223, 219, 0.9),
-      rgba(114, 43, 134, 0.9)
+      rgba(10, 223, 219, 0.55),
+      rgba(114, 43, 134, 0.55)
     ),
     url(../img/Screenshot1.png);
 }
@@ -271,14 +323,15 @@ body {
   width: 75%;
 }
 .card__heading-span--1 {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.2rem 0.8rem;
 }
 .card__details {
   padding: 2.8rem;
 }
 .card__details ul {
   list-style: none;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 .card__details ul li {
@@ -294,26 +347,80 @@ body {
   font-weight: 400;
   color: #1a39c4;
 }
+.card__details ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Experience ---------- */
+#experience {
+  padding: 4rem 2rem 5rem;
+  background-color: #f7f7f7;
+}
+.exp-list {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.exp-item {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+  padding: 2.4rem 3rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.exp-item h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+.exp-meta {
+  font-size: 1.5rem;
+  color: #722b86;
+  font-weight: 400;
+  margin: 0.3rem 0 1rem;
+}
+.exp-item ul {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+}
+.exp-item ul li {
+  margin-bottom: 0.5rem;
+}
+.exp-note {
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
 
 #contact {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 4rem;
+  padding: 4rem 2rem 0;
+}
+#contact p {
+  max-width: 70rem;
+  margin: 0 auto;
 }
 .icons {
   margin: 2rem auto;
   width: 35rem;
   display: flex;
+  justify-content: center;
+}
+.icons ul {
+  display: flex;
+  padding: 0;
 }
 .icons ul li {
   margin: 0 4rem;
   list-style: none;
-  float: left;
 }
 .icons ul li a {
   text-decoration: none;
   color: rgb(5, 0, 80);
-  justify-content: space-between;
 }
 .icons ul li i {
   font-size: 3.2rem;
@@ -322,4 +429,32 @@ body {
   width: 3rem;
   height: 3rem;
   color: #0076b2;
+}
+
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 3.2rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .nav ul li {
+    font-size: 1.7rem;
+    margin: 0 0.1em;
+  }
+  .nav ul li a {
+    padding: 0 0.7em;
+  }
+  .row {
+    padding: 3rem 2.5rem;
+  }
+  .skill-group {
+    flex: 1 1 100%;
+  }
+  .icons {
+    width: auto;
+  }
+  .icons ul li {
+    margin: 0 2.5rem;
+  }
 }

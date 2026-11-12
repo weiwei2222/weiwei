@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Weiwei Lin — Front-End Developer and Web Designer based in Columbus, Ohio. HTML5, CSS3, JavaScript, React, WordPress, Bootstrap."
+    />
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
@@ -15,36 +19,79 @@
     />
 
     <script src="js/main.js" defer></script>
-    <title>Weiwei Portfolio Website</title>
+    <title>Weiwei Lin — Front-End Developer &amp; Web Designer</title>
   </head>
   <body>
     <header class="header">
       <div class="header-center">
         <div class="name">Weiwei Lin</div>
-        <div class="title">Full stack Software developer</div>
+        <div class="title">Front-End Developer &amp; Web Designer</div>
+        <div class="subtitle">Columbus, Ohio</div>
       </div>
     </header>
     <main>
       <nav class="nav">
         <ul>
           <li><a href="#aboutme" class="scroll-link">About Me</a></li>
+          <li><a href="#skills" class="scroll-link">Skills</a></li>
           <li><a href="#projects" class="scroll-link">Projects</a></li>
+          <li><a href="#experience" class="scroll-link">Experience</a></li>
           <li><a href="#contact" class="scroll-link">Contact</a></li>
         </ul>
       </nav>
+
       <section id="aboutme">
         <div class="row">
           <h1 class="section-title">About Me</h1>
-          Hey there! My name is Weiwei Lin and I'm an full-stack software
-          developer helping tech-constrained teams pitch & deliver more
-          ambitious apps and experiences. Here, you'll find a showcase of my
-          projects, skills, and experiences in the exciting world of software
-          development. Technology has always been my playground, and I thrive on
-          the challenge of turning ideas into functional, user-friendly
-          software.
+          <p>
+            Hi, I'm Weiwei Lin, a front-end developer and web designer based
+            in Columbus, Ohio. I designed and launched corporate websites in
+            2014–2017 and built responsive e-commerce front-end pages in
+            2011–2014. More recently, I completed the Per Scholas software
+            engineering bootcamp in Columbus, graduating as valedictorian in
+            January 2024, and I now work at Accenture as a Packaged App
+            Development Associate.
+          </p>
+          <p>
+            I enjoy taking a website from layout and visual design through
+            hand-coded HTML, CSS, and JavaScript to launch — and building
+            responsive, user-friendly interfaces with React.
+          </p>
         </div>
-        <div class="photo"><img src="./img/WeiWeiLin.jpg" /></div>
+        <div class="photo"><img src="./img/WeiWeiLin.jpg" alt="Weiwei Lin" /></div>
       </section>
+
+      <section id="skills">
+        <h1 class="section-title">Skills</h1>
+        <div class="skills-wrap">
+          <div class="skill-group">
+            <h3>Web Design &amp; Build</h3>
+            <p>
+              HTML5 · CSS3 · JavaScript (ES6+) · Responsive Design ·
+              Cross-Browser Compatibility
+            </p>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks &amp; CMS</h3>
+            <p>React · Redux · React Router · Material UI · Bootstrap · WordPress</p>
+          </div>
+          <div class="skill-group">
+            <h3>Design Work</h3>
+            <p>
+              Page Layouts · Color Schemes &amp; Themes · Icons &amp; UI
+              Components · Site Navigation &amp; Templates · Adobe Photoshop
+            </p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; More</h3>
+            <p>
+              Git / GitHub · RESTful APIs · Node.js · Express · MongoDB · SQL ·
+              Currently learning TypeScript
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="projects">
         <h1 class="section-title">Projects</h1>
         <div class="projects-row">
@@ -57,14 +104,14 @@
             </h4>
             <div class="card__details">
               <ul>
-                <li>16 cards</li>
-                <li>8 cards match</li>
-                <li>Javascript game</li>
+                <li>HTML5 · CSS3 · JavaScript</li>
+                <li>Game logic with DOM manipulation, callbacks &amp; AJAX</li>
                 <li>
                   <a
-                    href="https://github.com/weiwei2222/memorygame.git"
+                    href="https://github.com/weiwei2222/memorygame"
                     class="btn btn--white"
                     target="_blank"
+                    rel="noopener"
                     >GitHub</a
                   >
                 </li>
@@ -73,6 +120,7 @@
                     href="https://weiwei2222.github.io/memorygame/"
                     class="btn btn--white"
                     target="_blank"
+                    rel="noopener"
                     >Live Demo</a
                   >
                 </li>
@@ -89,14 +137,14 @@
             </h4>
             <div class="card__details">
               <ul>
-                <li>Responsive website</li>
-                <li>User friendly interface</li>
-                <li>React App</li>
+                <li>React · React Router · REST APIs</li>
+                <li>Search &amp; filtering, responsive interface</li>
                 <li>
                   <a
                     href="https://github.com/weiwei2222/Chinese_Art_Gallery"
                     class="btn btn--white"
                     target="_blank"
+                    rel="noopener"
                     >GitHub</a
                   >
                 </li>
@@ -105,6 +153,7 @@
                     href="https://chinese-art-gallery.netlify.app/"
                     class="btn btn--white"
                     target="_blank"
+                    rel="noopener"
                     >Live Demo</a
                   >
                 </li>
@@ -116,30 +165,151 @@
             <div class="card__picture card__picture--3">&nbsp;</div>
             <h4 class="card__heading">
               <span class="card__heading-span card__heading-span--1"
-                >catLover App</span
+                >Cat Lover App</span
               >
             </h4>
             <div class="card__details">
               <ul>
-                <li>MERN App</li>
-                <li>Full stack</li>
-                <li>Authentic</li>
+                <li>React · Redux · Material UI</li>
+                <li>Node.js · Express · MongoDB · Auth</li>
                 <li>
-                  <a href="https://github.com/weiwei2222/catLover.git" class="btn btn--white" target="_blank">GitHub</a>
+                  <a
+                    href="https://github.com/weiwei2222/catLover"
+                    class="btn btn--white"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
                 </li>
                 <li>
-                  <a href="https://catlover.onrender.com" class="btn btn--white" target="_blank"
+                  <a
+                    href="https://catlover.onrender.com"
+                    class="btn btn--white"
+                    target="_blank"
+                    rel="noopener"
                     >Live Demo</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-          <div class="card__side card__side--back card__side--back-3">
-            <div class="card__cta"></div>
-          </div>
         </div>
       </section>
+
+      <section id="experience">
+        <h1 class="section-title">Experience</h1>
+        <div class="exp-list">
+          <div class="exp-item">
+            <h3>Packaged App Development Associate — Accenture</h3>
+            <p class="exp-meta">Sep 2024 – Present · Columbus, Ohio</p>
+            <ul>
+              <li>
+                Monitor scheduled jobs, verify successful completion, and take
+                corrective action to resolve failures.
+              </li>
+              <li>
+                Diagnose scheduled-job and database-performance incidents;
+                generate daily results and performance reports with SQL
+                queries.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>Technology Consulting Analyst — Accenture</h3>
+            <p class="exp-meta">Jun 2024 – Aug 2024 · Columbus, Ohio</p>
+            <ul>
+              <li>
+                Reviewed the client's Self-Service Portal to identify and
+                summarize user-experience and process issues, and recommended
+                improvements.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>UI Designer — Guangdong 115 Technology Co Ltd</h3>
+            <p class="exp-meta">Sep 2016 – Nov 2017 · Dongguan, China</p>
+            <ul>
+              <li>
+                Designed color schemes, themes, styles, and page layouts for
+                115 applications.
+              </li>
+              <li>
+                Revitalized icons and UI components to improve consistency and
+                user engagement across platforms.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>Web Designer — Dongguan Monda Plastics Technology Co Ltd</h3>
+            <p class="exp-meta">May 2015 – Sep 2016 · Dongguan, China</p>
+            <ul>
+              <li>
+                Designed and launched corporate websites aligned with the
+                company's visual identity.
+              </li>
+              <li>
+                Developed intuitive templates and optimized site navigation to
+                improve user experience.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>Web Designer — Dongguan Daidaihao Co Ltd</h3>
+            <p class="exp-meta">Dec 2014 – Apr 2015 · Dongguan, China</p>
+            <ul>
+              <li>
+                Designed and developed the company website with responsive
+                functionality and modern visual styling.
+              </li>
+              <li>
+                Updated and improved front-end pages to enhance usability and
+                visual consistency.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>
+              Front-End Developer — Dongguan Post Office E-Commerce Branch
+            </h3>
+            <p class="exp-meta">Jun 2011 – Apr 2014 · Dongguan, China</p>
+            <ul>
+              <li>
+                Built responsive static web pages from design mockups using
+                HTML5, CSS3, and JavaScript, ensuring pixel-perfect
+                implementation.
+              </li>
+              <li>
+                Resolved cross-browser compatibility issues; maintained and
+                optimized front-end interfaces.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>Education — Per Scholas, Columbus, Ohio</h3>
+            <p class="exp-meta">Sep 2023 – Jan 2024</p>
+            <ul>
+              <li>
+                Women of Color in Software Engineering bootcamp — graduated
+                valedictorian; built and deployed three projects with HTML5,
+                CSS3, JavaScript, React, Node.js, and MongoDB.
+              </li>
+            </ul>
+          </div>
+
+          <p class="exp-note">
+            Note: The corporate websites from 2014–2017 are no longer live;
+            their descriptions above are from my employment history. The
+            projects under “Projects” include live demos and public code.
+          </p>
+        </div>
+      </section>
+
       <section id="contact">
         <h1 class="section-title">Contact Me</h1>
         <p>
@@ -150,19 +320,19 @@
         <div class="icons">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/weiwei2222/" target="_blank">
+              <a href="https://www.linkedin.com/in/weiwei2222/" target="_blank" rel="noopener">
                 <i class="devicon-linkedin-plain colored"></i>
               </a>
             </li>
             <li>
-              <a href="https://github.com/weiwei2222" target="_blank"
+              <a href="https://github.com/weiwei2222" target="_blank" rel="noopener"
                 ><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                </svg></i
-              ></a>
+                </svg></a
+              >
             </li>
             <li>
-              <a href="mailto:linweiwei2222@gmail.com" target="_blank">
+              <a href="mailto:linweiwei2222@gmail.com">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                 <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
@@ -174,8 +344,8 @@
     </main>
     <footer class="footer">
       <div class="header-center">
-         <div>Design and build by Weiwei Lin</div>
-         <div>Copyright © by Weiwei Lin</div>
+         <div>Designed and built by Weiwei Lin</div>
+         <div>Copyright © Weiwei Lin</div>
       </div>
     </footer>
   </body>

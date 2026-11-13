@@ -123,11 +123,9 @@ a:focus-visible {
   opacity: 0.9;
 }
 
-/* ---------- Sticky nav ---------- */
+/* ---------- Navigation (pinned by JS on scroll) ---------- */
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
   color: #636363;
   width: 100%;
   padding: 1rem;
@@ -135,6 +133,13 @@ a:focus-visible {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
   cursor: default;
   text-align: center;
+}
+.nav.is-stuck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 .nav ul li {
   font-size: 1.9rem;

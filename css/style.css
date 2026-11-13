@@ -82,7 +82,7 @@ a:focus-visible {
       rgba(10, 223, 219, 0.9),
       rgba(114, 43, 134, 0.9)
     ),
-    url(../img/hero.png);
+    url(../img/hero-web.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -172,7 +172,7 @@ a:focus-visible {
       rgba(10, 223, 219, 0.9),
       rgba(114, 43, 134, 0.9)
     ),
-    url(../img/hero.png);
+    url(../img/hero-web.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -335,7 +335,7 @@ a:focus-visible {
       rgba(10, 223, 219, 0.55),
       rgba(114, 43, 134, 0.55)
     ),
-    url(../img/IMG_1005.jpeg);
+    url(../img/memorygame-web.jpg);
 }
 .card__picture--2 {
   background-image: linear-gradient(
@@ -343,7 +343,7 @@ a:focus-visible {
       rgba(10, 223, 219, 0.55),
       rgba(114, 43, 134, 0.55)
     ),
-    url(../img/arts.png);
+    url(../img/arts-web.jpg);
 }
 .card__picture--3 {
   background-image: linear-gradient(
@@ -351,7 +351,7 @@ a:focus-visible {
       rgba(10, 223, 219, 0.55),
       rgba(114, 43, 134, 0.55)
     ),
-    url(../img/Screenshot1.png);
+    url(../img/catlover-web.jpg);
 }
 .card__heading {
   font-size: 2.8rem;
@@ -404,6 +404,31 @@ a:focus-visible {
   border-color: transparent;
   color: #fff;
   text-decoration: none;
+}
+.hero-actions {
+  margin-top: 2.4rem;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.btn--hero {
+  border-color: #fff;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.9rem 3rem;
+}
+.btn--hero:hover {
+  background-color: #fff;
+  background-image: none;
+  border-color: #fff;
+  color: #722b86;
+}
+.card__details ul li.card__desc {
+  font-weight: 400;
+  color: #444;
+}
+.contact-resume {
+  margin-top: 2.5rem;
 }
 
 /* ---------- Experience ---------- */

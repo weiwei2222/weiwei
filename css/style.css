@@ -202,12 +202,14 @@ a:focus-visible {
   margin-top: 1rem;
   background-image: linear-gradient(to right, #0adec3, #722b86);
 }
+#aboutme .section-title,
 #projects .section-title,
 #skills .section-title,
 #experience .section-title,
 #contact .section-title {
   text-align: center;
 }
+#aboutme .section-title::after,
 #projects .section-title::after,
 #skills .section-title::after,
 #experience .section-title::after,

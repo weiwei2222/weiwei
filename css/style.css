@@ -47,6 +47,8 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -58,11 +60,23 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: #555;
+  background-color: #fff;
+}
+
+::selection {
+  background: rgba(114, 43, 134, 0.85);
+  color: #fff;
+}
+
+a:focus-visible {
+  outline: 3px solid #3994d9;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .header {
-  height: 34vh;
-  min-height: 22rem;
+  height: 36vh;
+  min-height: 24rem;
   background-image: linear-gradient(
       135deg,
       rgba(10, 223, 219, 0.9),
@@ -84,14 +98,19 @@ body {
   padding: 0 2rem;
 }
 .name {
-  font-size: 4rem;
+  font-size: 4.4rem;
+  font-weight: 700;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
   display: block;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 .title {
-  font-size: 2rem;
+  font-size: 2.1rem;
+  font-weight: 400;
+  letter-spacing: 0.12rem;
   display: block;
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -99,23 +118,26 @@ body {
 }
 .subtitle {
   font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  margin-top: 0.5rem;
+  letter-spacing: 0.25rem;
+  margin-top: 0.6rem;
   opacity: 0.9;
 }
+
+/* ---------- Sticky nav ---------- */
 .nav {
-  transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
-    border-top-right-radius 0.2s ease, padding 0.2s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   color: #636363;
   width: 100%;
   padding: 1rem;
-  background-color: #f7f7f7;
+  background-color: rgba(247, 247, 247, 0.97);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
   cursor: default;
   text-align: center;
 }
 .nav ul li {
-  font-size: 2rem;
-  transition: margin 0.2s ease;
+  font-size: 1.9rem;
   display: inline-block;
   margin: 0 0.35em;
   padding: 0;
@@ -123,22 +145,23 @@ body {
 }
 .nav ul li a {
   text-decoration: none;
-  transition: font-size 0.2s ease;
   display: inline-block;
   height: 2.25em;
   line-height: 2.25em;
   padding: 0 1.25em;
-  box-shadow: inset 0 0 0 1px transparent;
+  border-radius: 10rem;
   color: #636363;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
-.nav ul li a.active {
-  background-color: #ffffff;
-  box-shadow: none;
+.nav ul li a:hover {
+  color: #722b86;
+  background-color: #fff;
 }
+
 .footer {
   font-size: 1.6rem;
-  height: 20vh;
-  min-height: 12rem;
+  height: 18vh;
+  min-height: 11rem;
   background-image: linear-gradient(
       135deg,
       rgba(10, 223, 219, 0.9),
@@ -151,32 +174,8 @@ body {
   text-align: center;
   color: #ffffff;
 }
-#aboutme {
-  display: flex;
-  align-items: center;
-  padding: 5rem 0;
-  max-width: 114rem;
-  margin: 0 auto;
-}
 
-@media screen and (max-width: 980px) {
-  #aboutme {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-}
-.row {
-  animation-name: moveInBottom;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  padding: 5rem;
-  max-width: 114rem;
-  margin: 0 auto;
-  font-size: 1.8rem;
-}
-.row p + p {
-  margin-top: 1.5rem;
-}
+/* ---------- Sections & titles ---------- */
 .section-title {
   background-image: linear-gradient(
     to right bottom,
@@ -187,7 +186,16 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 3.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 0.4rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  background-image: linear-gradient(to right, #0adec3, #722b86);
 }
 #projects .section-title,
 #skills .section-title,
@@ -195,19 +203,34 @@ body {
 #contact .section-title {
   text-align: center;
 }
-.photo {
-  margin: 0 auto;
-  padding: 2rem;
+#projects .section-title::after,
+#skills .section-title::after,
+#experience .section-title::after,
+#contact .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
 }
-.photo img {
-  border-radius: 100%;
-  display: block;
-  max-width: 24rem;
+
+/* ---------- About ---------- */
+#aboutme {
+  padding: 5rem 0 3rem;
+}
+.row {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  padding: 2rem 5rem 4rem;
+  max-width: 92rem;
+  margin: 0 auto;
+  font-size: 1.85rem;
+}
+.row p + p {
+  margin-top: 1.5rem;
 }
 
 /* ---------- Skills ---------- */
 #skills {
-  padding: 4rem 2rem 5rem;
+  padding: 5rem 2rem 6rem;
   background-color: #f7f7f7;
 }
 .skills-wrap {
@@ -220,9 +243,14 @@ body {
 .skill-group {
   flex: 1 1 40%;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
   padding: 2.4rem 2.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-group:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 1.8rem 3.5rem rgba(0, 0, 0, 0.12);
 }
 .skill-group h3 {
   font-size: 1.9rem;
@@ -237,15 +265,15 @@ body {
 /* ---------- Projects ---------- */
 #projects {
   text-align: center;
-  margin: 4rem 0;
-  padding-top: 2rem;
+  margin: 0;
+  padding: 5rem 0 3rem;
 }
 
 .projects-row {
   animation-name: moveInBottom;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  padding: 2rem 5rem 5rem;
+  padding: 1rem 5rem 5rem;
   max-width: 114rem;
   margin: 0 auto;
   font-size: 1.8rem;
@@ -254,7 +282,7 @@ body {
 @media only screen and (max-width: 56.25em) {
   .projects-row {
     max-width: 50rem;
-    padding: 0 3rem;
+    padding: 0 3rem 3rem;
     display: block;
   }
 }
@@ -262,8 +290,8 @@ body {
 .card {
   width: calc((100% - 2 * 6rem) / 3);
   min-height: 46rem;
-  transition: all 0.8s ease;
-  border-radius: 3px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 8px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -273,10 +301,17 @@ body {
   left: 0;
   margin-bottom: 3rem;
 }
+.card:hover {
+  transform: translateY(-0.8rem);
+  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.22);
+}
 @media only screen and (max-width: 56.25em) {
   .card {
     width: 94%;
     clear: both;
+  }
+  .card:hover {
+    transform: none;
   }
 }
 .card__picture {
@@ -325,6 +360,7 @@ body {
 .card__heading-span--1 {
   background: rgba(0, 0, 0, 0.25);
   padding: 0.2rem 0.8rem;
+  border-radius: 3px;
 }
 .card__details {
   padding: 2.8rem;
@@ -342,18 +378,30 @@ body {
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
-.card__details ul li a {
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 2.6rem;
+  border: 1px solid #722b86;
+  border-radius: 10rem;
+  color: #722b86;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
   text-decoration: none;
-  font-weight: 400;
-  color: #1a39c4;
+  transition: all 0.25s ease;
 }
-.card__details ul li a:hover {
-  text-decoration: underline;
+.btn:hover {
+  background-image: linear-gradient(135deg, #0adec3, #722b86);
+  border-color: transparent;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ---------- Experience ---------- */
 #experience {
-  padding: 4rem 2rem 5rem;
+  padding: 5rem 2rem 6rem;
   background-color: #f7f7f7;
 }
 .exp-list {
@@ -362,11 +410,17 @@ body {
 }
 .exp-item {
   background: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
+  border-left: 0.4rem solid transparent;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
   padding: 2.4rem 3rem;
   margin-bottom: 2rem;
   text-align: left;
+  transition: border-left-color 0.3s ease, box-shadow 0.3s ease;
+}
+.exp-item:hover {
+  border-left-color: #722b86;
+  box-shadow: 0 1.6rem 3.5rem rgba(0, 0, 0, 0.12);
 }
 .exp-item h3 {
   font-size: 2rem;
@@ -394,19 +448,19 @@ body {
   padding: 0 2rem;
 }
 
+/* ---------- Contact ---------- */
 #contact {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 4rem;
-  padding: 4rem 2rem 0;
+  padding: 5rem 2rem 0;
 }
 #contact p {
   max-width: 70rem;
   margin: 0 auto;
 }
 .icons {
-  margin: 2rem auto;
-  width: 35rem;
+  margin: 2.5rem auto;
   display: flex;
   justify-content: center;
 }
@@ -421,6 +475,12 @@ body {
 .icons ul li a {
   text-decoration: none;
   color: rgb(5, 0, 80);
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.icons ul li a:hover {
+  transform: translateY(-0.4rem);
+  opacity: 0.75;
 }
 .icons ul li i {
   font-size: 3.2rem;
@@ -432,27 +492,32 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 9rem;
+  }
   .name {
     font-size: 3.2rem;
+    letter-spacing: 0.2rem;
   }
   .title {
     font-size: 1.8rem;
   }
   .nav ul li {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin: 0 0.1em;
   }
   .nav ul li a {
-    padding: 0 0.7em;
+    padding: 0 0.65em;
   }
   .row {
-    padding: 3rem 2.5rem;
+    padding: 1rem 2.5rem 3rem;
+    font-size: 1.75rem;
   }
   .skill-group {
     flex: 1 1 100%;
   }
-  .icons {
-    width: auto;
+  .exp-item {
+    padding: 2rem 2.2rem;
   }
   .icons ul li {
     margin: 0 2.5rem;

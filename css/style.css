@@ -49,6 +49,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -308,9 +310,11 @@ a:focus-visible {
   left: 0;
   margin-bottom: 3rem;
 }
-.card:hover {
-  transform: translateY(-0.8rem);
-  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.22);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-0.8rem);
+    box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.22);
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .card {
@@ -399,11 +403,17 @@ a:focus-visible {
   text-decoration: none;
   transition: all 0.25s ease;
 }
-.btn:hover {
-  background-image: linear-gradient(135deg, #0adec3, #722b86);
-  border-color: transparent;
-  color: #fff;
-  text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background-image: linear-gradient(135deg, #0adec3, #722b86);
+    border-color: transparent;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.card__details .btn {
+  min-width: 16rem;
+  text-align: center;
 }
 .hero-actions {
   margin-top: 2.4rem;
@@ -417,11 +427,13 @@ a:focus-visible {
   font-size: 1.6rem;
   padding: 0.9rem 3rem;
 }
-.btn--hero:hover {
-  background-color: #fff;
-  background-image: none;
-  border-color: #fff;
-  color: #722b86;
+@media (hover: hover) and (pointer: fine) {
+  .btn--hero:hover {
+    background-color: #fff;
+    background-image: none;
+    border-color: #fff;
+    color: #722b86;
+  }
 }
 .card__details ul li.card__desc {
   font-weight: 400;
